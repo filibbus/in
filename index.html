@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Call Review</title>
+    <style>
+        body {
+            /* This looks for your local file named background.png */
+            /* When you upload this to GitHub, upload the image too! */
+            background-image: url('background.png'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #ffdae9; /* Backup pink color */
+            
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .survey-card {
+            background: #fff0f5; /* Cute light pink box */
+            padding: 30px;
+            border-radius: 20px;
+            /* The 2D pop-out effect */
+            box-shadow: 0 10px 20px rgba(255, 105, 180, 0.4); 
+            border: 4px solid #ff69b4; /* Brighter pink border */
+            width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff1493;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #000000; /* Black text for clarity */
+            font-weight: bold;
+            margin-top: 15px;
+            text-align: left;
+        }
+
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #000000;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            background-color: #ff1493;
+        }
+
+        .kitty-footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #ff69b4;
+        }
+    </style>
+</head>
+<body>
+
+<div class="survey-card">
+    <h1>Conversation with Philip</h1>
+    
+    <form action="https://formspree.io/f/xlglzalb" method="POST">
+        
+        <label>How was our phone call?</label>
+        <select name="rating">
+            <option value="5 stars">⭐⭐⭐⭐⭐ (Perfect)</option>
+            <option value="4 stars">⭐⭐⭐⭐ (Pretty good)</option>
+            <option value="3 stars">⭐⭐⭐ (It was okay)</option>
+            <option value="2 stars">⭐⭐ (Needs more snacks)</option>
+            <option value="1 star">⭐ (Call me back now)</option>
+        </select>
+
+        <label>Was the situation resolved?</label>
+        <select name="resolution">
+            <option value="100% Resolved">Everything is 100% resolved!</option>
+            <option value="Mostly Resolved">Mostly resolved, feeling better.</option>
+            <option value="Not Resolved">Still thinking about it...</option>
+        </select>
+
+        <label>Leave a note or comment:</label>
+        <textarea name="comments" placeholder="Write your thoughts here..."></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+    
+
+</div>
+
+</body>
+</html>
